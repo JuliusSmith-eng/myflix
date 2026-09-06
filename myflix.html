@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MYFLIX — Movies and shows without limits</title>
+    <link rel="icon" type="svg/png" href="images/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <span class="logo">MYFLIX</span>
+        <div class="nav-right">
+          <select class="lang-select js-lang" aria-label="Language">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+          </select>
+          <button class="signin-btn" data-i18n="nav.signin">Sign In</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="collage" id="collage"></div>
+      <div class="hero-inner">
+        <h1 data-i18n="hero.title">Unlimited movies, shows, and more</h1>
+        <div class="price-line" data-i18n="hero.price">
+          Starts at $9.49. Cancel anytime.
+        </div>
+        <div class="lede2" data-i18n="hero.lede">
+          Ready to watch? Enter your email to create or restart your membership.
+        </div>
+        <form class="email-form" id="heroForm">
+          <input
+            type="email"
+            class="js-email-placeholder"
+            data-i18n-placeholder="hero.placeholder"
+            placeholder="Email address"
+            required
+          />
+          <button class="cta" type="submit">
+            <span data-i18n="hero.cta">Get Started</span> →
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="reasons">
+      <div class="wrap">
+        <h2 data-i18n="reasons.heading">More reasons to join</h2>
+        <div class="reason-grid">
+          <div class="reason-card" style="--rc1: #231a3a; --rc2: #120c1e">
+            <h3 data-i18n="reasons.card1.title">Enjoy on your TV</h3>
+            <p data-i18n="reasons.card1.desc">
+              Smart TVs, consoles, streaming devices, and more.
+            </p>
+            <div class="reason-icon">📺</div>
+          </div>
+          <div class="reason-card" style="--rc1: #2a1720; --rc2: #160b10">
+            <h3 data-i18n="reasons.card2.title">Download to watch offline</h3>
+            <p data-i18n="reasons.card2.desc">
+              Save your favorites and always have something to watch.
+            </p>
+            <div class="reason-icon">⬇️</div>
+          </div>
+          <div class="reason-card" style="--rc1: #1a2436; --rc2: #0d121c">
+            <h3 data-i18n="reasons.card3.title">Watch everywhere</h3>
+            <p data-i18n="reasons.card3.desc">
+              Stream on your phone, tablet, laptop, and TV.
+            </p>
+            <div class="reason-icon">🎬</div>
+          </div>
+          <div class="reason-card" style="--rc1: #2a1f14; --rc2: #160f0a">
+            <h3 data-i18n="reasons.card4.title">Create profiles for kids</h3>
+            <p data-i18n="reasons.card4.desc">
+              A space made just for them — included with your membership.
+            </p>
+            <div class="reason-icon">🧒</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rail-section">
+      <div class="wrap rail-wrap">
+        <h2 data-i18n="rail.heading">Trending now</h2>
+        <div class="rail" id="rail"></div>
+        <button
+          class="rail-arrow rail-arrow-prev"
+          id="railPrev"
+          aria-label="Previous"
+        >
+          ‹
+        </button>
+        <button
+          class="rail-arrow rail-arrow-next"
+          id="railNext"
+          aria-label="Next"
+        >
+          ›
+        </button>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+        <details open>
+          <summary><span data-i18n="faq.q1">What is MYFLIX?</span></summary>
+          <div class="faq-answer" data-i18n="faq.a1">
+            A streaming service with movies and shows. Watch ad-free on any
+            device.
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span data-i18n="faq.q2">How much does it cost?</span>
+          </summary>
+          <div class="faq-answer" data-i18n="faq.a2">
+            One flat monthly price, no hidden fees. Change or cancel anytime.
+          </div>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q3">Where can I watch?</span></summary>
+          <div class="faq-answer" data-i18n="faq.a3">
+            In your browser or the app on phone, TV, and consoles. Progress
+            syncs automatically.
+          </div>
+        </details>
+        <details>
+          <summary><span data-i18n="faq.q4">How do I cancel?</span></summary>
+          <div class="faq-answer" data-i18n="faq.a4">
+            Two clicks in account settings — no penalties, no phone calls.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <div class="wrap">
+        <p data-i18n="footercta.text">
+          Ready to watch? Enter your email to create an account.
+        </p>
+        <form class="email-form" id="footerForm">
+          <input
+            type="email"
+            class="js-email-placeholder"
+            data-i18n-placeholder="hero.placeholder"
+            placeholder="Email address"
+            required
+          />
+          <button class="cta" type="submit">
+            <span data-i18n="hero.cta">Get Started</span> →
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-cols">
+          <div>
+            <a href="#" data-i18n="footer.col1.a">FAQ</a>
+            <a href="#" data-i18n="footer.col1.b">Help Center</a>
+            <a href="#" data-i18n="footer.col1.c">Account</a>
+          </div>
+          <div>
+            <a href="#" data-i18n="footer.col2.a">Terms of Use</a>
+            <a href="#" data-i18n="footer.col2.b">Privacy</a>
+            <a href="#" data-i18n="footer.col2.c">Cookie Preferences</a>
+          </div>
+          <div>
+            <a href="#" data-i18n="footer.col3.a">About</a>
+            <a href="#" data-i18n="footer.col3.b">Jobs</a>
+            <a href="#" data-i18n="footer.col3.c">Press</a>
+          </div>
+          <div>
+            <a href="#" data-i18n="footer.col4.a">Ways to Watch</a>
+            <a href="#" data-i18n="footer.col4.b">Legal Notices</a>
+          </div>
+        </div>
+        <div data-i18n="footer.bottom">
+          MYFLIX is a portfolio demo project, not affiliated with any real
+          streaming service.
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="modalBackdrop">
+      <div class="modal">
+        <div class="modal-visual" id="modalVisual">
+          <button class="close-btn" id="modalClose" aria-label="Close">
+            ✕
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <div class="tags" id="modalTags"></div>
+          <p class="desc" id="modalDesc"></p>
+          <button class="cta js-get-started" type="button">
+            <span data-i18n="hero.cta">Get Started</span> →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="signupBackdrop">
+      <div class="modal signup-modal">
+        <button
+          class="close-btn signup-close"
+          id="signupClose"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+
+        <div class="modal-body" id="signupStep">
+          <h3 data-i18n="signup.title">Create your account</h3>
+          <p class="desc" data-i18n="signup.subtitle">
+            Enter your email and choose a password to finish setting up MYFLIX.
+          </p>
+          <form id="signupForm">
+            <input
+              type="email"
+              id="signupEmail"
+              class="js-email-placeholder"
+              data-i18n-placeholder="hero.placeholder"
+              placeholder="Email address"
+              required
+            />
+            <input
+              type="password"
+              id="signupPassword"
+              data-i18n-placeholder="signup.password"
+              placeholder="Password"
+              required
+              minlength="6"
+              style="margin-top: 10px"
+            />
+            <button
+              class="cta"
+              type="submit"
+              style="margin-top: 16px; width: 100%; justify-content: center"
+            >
+              <span data-i18n="signup.continue">Continue</span> →
+            </button>
+          </form>
+        </div>
+
+        <div class="modal-body" id="signupSuccess" hidden>
+          <h3 data-i18n="signup.success.title">You're all set</h3>
+          <p class="desc" data-i18n="signup.success.text">
+            This is a portfolio demo — no real account was created, but that's
+            exactly how the flow would look.
+          </p>
+          <button
+            class="cta"
+            type="button"
+            id="signupDone"
+            style="width: 100%; justify-content: center"
+          >
+            <span data-i18n="signup.done">Done</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
